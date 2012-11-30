@@ -315,8 +315,8 @@ Alphabetize your CSS declarations, within selectors, as you write or before comm
 	color: #fff;
 	display: inline-block;
 	float: left;
+  vertical-align: middle;
 	width: 100%;
-	vertical-align: middle;
 }
 ```
 
