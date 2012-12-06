@@ -11,14 +11,14 @@ Indent by 2 spaces at a time. Do not use tabs.
 **html**
 ```html
 <ul>
-  <li>Lullabot
-  <li>Is great!
+  <li>Lullabot</li>
+  <li>Is great!</li>
 </ul>
 ```
 **css**
 ```css
 .class {
-  color: steelblue;	
+  color: steelblue;
 }
 ```
 
@@ -39,35 +39,35 @@ Always do your best to remove any trailing whitespace in your code. Whitespace c
 ```html
 <!-- Nevaaar!!1! -->
 <ul>
-  <li>Trailing_
-  <li>whitespace_
+  <li>Trailing_ </li>
+  <li>whitespace </li>
 </ul>
 ```
 ```html
 <!-- Good dog! -->
 <ul>
-  <li>Sit Ubu,
-  <li>sit.
+  <li>Sit Ubu,</li>
+  <li>sit.</li>
 </ul>
 ```
 
 #  Comments
 Explain code wherever possible. Not everything you write will be obvious to everyone who reads it later.
-* #### HTML comments<br />During the development phase only 
+* #### HTML comments<br>
   * it is appropriate to comment closing tags for easier navigation like so:
 
   ```html
   <div>
     <div class="class1">
-      <p>Lorem ipsum
+      <p>Lorem ipsum</p>
       <div class="class2">
-        <p>dolor sit amet
+        <p>dolor sit amet</p>
       </div><!-- closes .class2 -->
     </div><!-- closes .class1 -->
   </div>
   ```
 
-* #### CSS comments<br />Within CSS documents, comments should be used for: 
+* #### CSS comments<br />Within CSS documents, comments should be used for:
   * _grouping styles together in a sane manner_:
 
     ```css
@@ -88,7 +88,7 @@ Explain code wherever possible. Not everything you write will be obvious to ever
 
     ```css
     /**
-     *	Styles a comment-esque block of markup:
+     *  Styles a comment-esque block of markup:
      *  <div class="container">
      *    <div class="class">
      *      <img src="/sites/all/themes/bestthemeever/images/woot.jpg" alt="woot!"/>
@@ -96,7 +96,7 @@ Explain code wherever possible. Not everything you write will be obvious to ever
      *    <div class="class1">
      *      <p>This is some text that might appear to the right of the image.
      *    </div>
-     *	</div>
+     *  </div>
      */
     .container {
       width: 80%;
@@ -111,7 +111,7 @@ Explain code wherever possible. Not everything you write will be obvious to ever
       width: 59%;
     }
     .class1:after {
-      clear: both;	
+      clear: both;
     }
     ```
 
@@ -185,29 +185,27 @@ Think of these concerns in terms of money. Tasty tasty money. It costs more time
 <p>Let's be friends forever.</p>
 ```
 
-### Optional tags (optional)
-For file size optimization and scannability purposes, consider ommitting optional tags. The [HTML5 specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#syntax-tag-omission) defines what tags can be ommitted.
+### Optional tags
+The [HTML5 specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#syntax-tag-omission) defines what tags can be ommitted.
 
-This will go against everything your heart tells you, but is likely to become more common as time moves on. Might as well join the bleeding edge while it's still sharp.
+What do we say to unclosed tags? NOT TODAY!
 
 ```html
-<!-- Old school -->
-<ul>
-  <li>list item 1</li>
-  <li>list item 2</li>
-</ul>
-<p>Yo dawg, I heard you like extra tags in your markup.</p>
-```
-```html
-<!-- New kids on the block -->
+<!-- No wai!!! -->
 <ul>
   <li>list item 1
   <li>list item 2
 </ul>
-<p>Yeah, that's pretty rad. 
+<p>This will hurt your brain!
 ```
-
-Interestingly enough, the `<head>` and even `<body>` tags are apparently optional. Let's continue to use those at the very least.
+```html
+<!-- Keep it familiar. -->
+<ul>
+  <li>list item 1</li>
+  <li>list item 2</li>
+</ul>
+<p>Yo dawg, I heard you like closing tags.</p>
+```
 
 ### Type attributes
 Leave off `type` attributes for `<link>`s and `<script>`s unless you're using something that isn't CSS or JavaScript, those are the defaults.
@@ -236,24 +234,29 @@ Indent each child of the above elements. Other elements should be written inline
 ```
 ```html
 <ul>
-  <li>Falcon Punch!
-  <li>Falcon Kick!
-  <li>Show me your moves!
+  <li>Falcon Punch!</li>
+  <li>Falcon Kick!</li>
+  <li>Show me your moves!</li>
 </ul>
 ```
 ```html
 <table>
   <thead>
     <tr>
-      <th>Money
-      <th>Problems
+      <th>Money</th>
+      <th>Problems</th>
+    </tr>
+  </thead>
   <tbody>
-  	<tr>
-  	  <td>1
-  	  <td>5
-  	<tr>
-  	  <td>2
-  	  <td>20
+    <tr>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>20</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -292,31 +295,28 @@ aside {
 ```
 
 #### Organization
-**Organization is a hot topic among front-end developers. We Lullabots are creating our own style which is probably a mix of SMACSS and SASS _partials and such. We'll work it out together**
 
-Each CSS document should have a Table of Contents at the top. This table will make navigating your stylesheets much easier for other people who need to edit or reference your document. Here's an example:
-```css
-/**
- * CONTENTS
- * -------------------------------------------------
- *	- Notes
- *  - Reset
- *  - Global 		Re-usable classes
- *  - Users			User profiles.
- *  - Galleries		The image gallery content type.
- *  - Forms
- */
+##### Drupal Theme Directory Structure
+```html
+  - themename
+      - css
+      - scss
+        - partials
+      - fonts
+      - images
+      - templates
+      - js
 ```
 
 Alphabetize your CSS declarations, within selectors, as you write or before committing your changes to the master branch of whatever project you're working on. This helps standardize our stylesheets further and helps make navigation / changes easier.
 ```css
 .class {
-	background-color: #000;
-	color: #fff;
-	display: inline-block;
-	float: left;
-	width: 100%;
-	vertical-align: middle;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  vertical-align: middle;
 }
 ```
 
@@ -325,15 +325,15 @@ Here at Lullabot, we don't need no stinkin' snake_casing. We also don't like hum
 For classes and IDs spanning more than one word, use a hyphen to separate them.
 ```css
 .not_like_this {
-	color: blue;
+  color: blue;
 }
 .orLikeThis {
-	color: black;
+  color: black;
 }
 ```
 ```css
 .this-is-good {
-	color: white;
+  color: white;
 }
 ```
 
@@ -389,9 +389,9 @@ IDs pose an interesting set of issues and there are many varying viewpoints on h
 * The Benefits:
   * IDs marginally quicker for a browser to reference.
 
-In the face of this evidence, it seem spretty obvious that we should avoid IDs if we want to avoid problems of specificity (which we do). However, because Lullabots work so often with Drupal this borders on the impossible. 
+In the face of this evidence, it seem spretty obvious that we should avoid IDs if we want to avoid problems of specificity (which we do). However, because Lullabots work so often with Drupal this borders on the impossible.
 
-While we cannot completely avoid IDs in our Drupal markup, we _can_ avoid actually styling based on the ID selectors therein. 
+While we cannot completely avoid IDs in our Drupal markup, we _can_ avoid actually styling based on the ID selectors therein.
 
 The idea here is that classes can be stacked to infinity with barely measurable performance hits. So rather than add an ID and styling it in a very specific way, we can instead create styles of re-usable classes and stack those on elements to get a particular look. This is DRY.
 
@@ -459,15 +459,15 @@ Both examples above produce the same styles, however the second example lends it
 #### Units
 * 0 units
   * Do not use units after "0" values.
-  
+
   ```css
   margin: 0;
   box-shadow: 0 0 10px #000;
-  ``` 
-  
+  ```
+
 * Leading 0s
   * Omit leading "0"s in values.
-  
+
   ```css
   /* fail! */
   opacity: 0.5;
@@ -490,9 +490,9 @@ Colors should be declared in this order (least advanced -> most advanced):
 
 ```css
 /* Complex Colors Cooperate Cleanly! */
-text-shadow: 0 0 3px #000;   				/* IE stops here */
-text-shadow: 0 0 3px rgb(0, 0, 0);		/* Opera Mini stops here */
-text-shadow: 0 0 3px hsl(0, nan%, 0%);	/* Flock stops here */
+text-shadow: 0 0 3px #000;                /* IE stops here */
+text-shadow: 0 0 3px rgb(0, 0, 0);        /* Opera Mini stops here */
+text-shadow: 0 0 3px hsl(0, nan%, 0%);    /* Flock stops here */
 text-shadow: 0 0 3px rgba(0, 0, 0, .5);   /* Safari 4 stops here */
 text-shadow: 0 0 3px hsla(0, nan%, .5%);  /* Chrome stops here */
 ```
