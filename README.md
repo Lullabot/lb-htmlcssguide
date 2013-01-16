@@ -308,15 +308,54 @@ aside {
       - js
 ```
 
-Alphabetize your CSS declarations, within selectors, as you write or before committing your changes to the master branch of whatever project you're working on. This helps standardize our stylesheets further and helps make navigation / changes easier.
+#### CSS declaration order
+Rather than arbitrarily ordering declarations on a CSS selector, or alphabetizing them (also arbitrary), group related declarations together, much like you would group your SASS partials. This grouping order should help make certain properties easier to find (based on importance) which means we can make changes rapidly.
+
+**Declaration Groups**
+  - Positioning
+    - position
+    - float
+    - clear
+    - top
+    - right
+    - bottom
+    - left
+    - direction
+    - z-index
+  - Box Model
+    - display
+    - [(max|min)-]height
+    - [(max|min)-]width
+    - margin
+    - padding
+    - border
+    - box-sizing
+    - vertical-align
+    - long-hand forms of the above properties
+
+Other properties should be grouped with like properties in a way that makes sense
+
+  - font-size
+  - font-weight
+
+  - background-color
+  - background-position
+  
 ```css
 .class {
-  background-color: #000;
-  color: #fff;
-  display: inline-block;
+  
+  /* Positioning */
   float: left;
   width: 100%;
+  
+  /* Box Model */
+  display: inline-block;
   vertical-align: middle;
+  
+  /* Others */
+  background-color: #000;
+  color: #fff;
+  
 }
 ```
 
