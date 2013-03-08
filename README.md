@@ -588,3 +588,19 @@ color: #000000;
 color: #000;
 color: #dfded0;
 ```
+
+-------------------------------------------------------------------------------
+This stuff doesn't really belong here, but there's nowhere else to put it.
+
+## Drupal Theme Directory Structure
+```
+- themename
+  - css
+  - scss
+    - partials
+  - fonts
+  - images
+  - templates
+  - js
+```
+
