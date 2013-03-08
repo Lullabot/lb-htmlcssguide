@@ -604,3 +604,15 @@ This stuff doesn't really belong here, but there's nowhere else to put it.
   - js
 ```
 
+## Global naming conventions for images:
+The concise rule for the naming conventions we follow is this:
+`<type prefix>-<image name>-<state>.<extension>`
+
+### Prefixes & State suffixes
+prefix          | meaning       | suffix        |   meaning
+ -------------- | ------------- | ------------- | ----------------------------
+icn             | icon          | -hover        | hover
+btn             | button        | -trans        | transparent
+ptn             | pattern       | -rpt          | repeating
+bg              | background    | -yrm          | your mom
+
