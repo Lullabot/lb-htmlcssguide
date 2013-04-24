@@ -1,5 +1,5 @@
 # HTML/CSS Styleguide for Lullabot
-Welcome to the most stylish document you've ever seen.
+This styleguide is constantly in flux as we continue to nail down our best practices.
 
 ## General Formatting Rules
 
