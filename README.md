@@ -1,4 +1,4 @@
-# HTML/CSS Styleguide for Lullabot
+# HTML/CSS Awesome Styleguide for Lullabot
 This styleguide is constantly in flux as we continue to nail down our best practices.
 
 ## General Formatting Rules
